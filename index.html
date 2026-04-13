@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRENDS | Official Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="menu-toggle" onclick="openSidebar()">☰</div>
+                <h1 class="logo" onclick="location.reload()">TRENDS</h1>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search brands, products..." onkeyup="searchItems()">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="nav-right">
+                <button class="new-collection-btn" onclick="scrollToNew()">
+                    New Collection
+                </button>
+                <div class="nav-icons">
+
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span id="cartCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <span class="close-btn1" onclick="closeSidebar()">&times;</span>
+        </div>
+        <div class="sidebar-links">
+            <p class="sidebar-title">Categories</p>
+            <a href="#" onclick="showAllFromMenu()">All Collection</a>
+            <a href="#men-sec" onclick="filterCategory('men-sec')">Men's Wear</a>
+            <a href="#women-sec" onclick="filterCategory('women-sec')">Women's Wear</a>
+            <a href="#kids-sec" onclick="filterCategory('kids-sec')">Kids Section</a>
+            <hr>
+            <a href="#" onclick="openCartFromMenu()"><i class="fas fa-shopping-bag"></i> My Cart</a>
+            <a href="#"  onclick="openProfileFromMenu()"><i class="fas fa-user"></i> My Profile</a>
+            <a href="#" onclick="openOrdersFromMenu()"><i class="fas fa-box"></i> My Orders</a>
+        </div>
+    </div>
+
+    <section class="banner" id="new-collection">
+        <div class="banner-text">
+            <h2>NEW ARRIVALS</h2>
+            <h1>UP TO 60% OFF</h1>
+            <p>Exclusive Festive Collections for You</p>
+        </div>
+    </section>
+
+    <main id="main-grid">
+
+        <section id="men-sec" class="cat-section">
+            <h2 class="title">Men's Collection</h2>
+
+            <div class="sub-categories">
+                <span onclick="showAll()">All</span> |
+                <span onclick="filterSub('topwear')">Topwear</span> |
+                <span onclick="filterSub('bottomwear')">Bottomwear</span> |
+                <span onclick="filterSub('ethnicwear')">Ethnicwear</span>
+            </div>
+
+            <div class="grid">
+
+                <div class="card" data-name="casual shirt" data-category="topwear">
+                    <img src="images/Casual-Shirt.jpg">
+                    <div class="info">
+                        <h3>Casual Shirt</h3>
+                        <p>₹699</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Casual Shirt',699)" class="btn"> <i class="fas fa-cart-plus"></i>Add to Cart</button>
+                            <button onclick="buyNow('Casual Shirt',699)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="denim jeans" data-category="bottomwear">
+                    <img src="images/Denim-Jeans.jpg">
+                    <div class="info">
+                        <h3>Denim Jeans</h3>
+                        <p>₹1,299</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Denim Jeans',1299)" class="btn"> <i class="fas fa-cart-plus"></i>Add to Cart</button>
+                            <button onclick="buyNow('Denim Jeans',1299)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="white kurta" data-category="ethnicwear">
+                    <img src="images/men-kurta.jpg">
+                    <div class="info">
+                        <h3>White Kurta</h3>
+                        <p>₹899</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('White Kurta',899)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('White Kurta',899)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="cotton shirt" data-category="topwear">
+                    <img src="images/menshirt.jpg">
+                    <div class="info">
+                        <h3>Classic Cotton Shirt</h3>
+                        <p>₹699</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Classic Cotton Shirt',699)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Classic Cotton Shirt',699)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="blue jeans" data-category="bottomwear">
+                    <img src="images/men-Jeans.jpg">
+                    <div class="info">
+                        <h3>Slim Fit Blue Jeans</h3>
+                        <p>₹1,299</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Slim Fit Blue Jeans',1299)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Slim Fit Blue Jeans',1299)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="jacket" data-category="topwear">
+                    <img src="images/men-jacket.jpg">
+                    <div class="info">
+                        <h3>Stylish Casual Jacket</h3>
+                        <p>₹1,299</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Stylish Jacket',1299)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Stylish Jacket',1299)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="women-sec" class="cat-section">
+            <h2 class="title">Women's Collection</h2>
+
+            <div class="sub-categories">
+                <span onclick="showAll()">All</span> |
+                <span onclick="filterSub('sarees')">Sarees</span> |
+                <span onclick="filterSub('kurtis')">Kurtis</span> |
+                <span onclick="filterSub('lehenga')">Lehengas</span> |
+                <span onclick="filterSub('topwear')">Topwear</span>
+            </div>
+
+            <div class="grid">
+
+                <div class="card" data-name="silk saree" data-category="sarees">
+                    <img src="images/Silk-Saree.jpg">
+                    <div class="info">
+                        <h3>Silk Saree</h3>
+                        <p>₹2,499</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Silk Saree',2499)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Silk Saree',2499)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="floral kurti" data-category="kurtis">
+                    <img src="images/Floral-Kurti.jpg">
+                    <div class="info">
+                        <h3>Floral Kurti</h3>
+                        <p>₹799</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Floral Kurti',799)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Floral Kurti',799)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="lehenga" data-category="lehenga">
+                    <img src="images/Bridal-Lehenga.jpg">
+                    <div class="info">
+                        <h3>Bridal Lehenga</h3>
+                        <p>₹4,999</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Bridal Lehenga',4999)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Bridal Lehenga',4999)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="saree" data-category="sarees">
+                    <img src="images/women-saree.jpg">
+                    <div class="info">
+                        <h3>Elegant Silk Saree</h3>
+                        <p>₹2,499</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Elegant Saree',2499)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Elegant Saree',2499)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="topwear" data-category="topwear">
+                    <img src="images/women-top.jpg">
+                    <div class="info">
+                        <h3>Trendy Crop Top</h3>
+                        <p>₹799</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Crop Top',799)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Crop Top',799)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="embroidered saree" data-category="sarees">
+                    <img src="images/embroid-saree.jpg">
+                    <div class="info">
+                        <h3>Floral Embroidered Saree</h3>
+                        <p>₹2,499</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Embroidered Saree',2499)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Embroidered Saree',2499)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="kids-sec" class="cat-section">
+            <h2 class="title">Kids Section</h2>
+
+            <div class="sub-categories">
+                <span onclick="showAll()">All</span> |
+                <span onclick="filterSub('tshirt')">Boys</span> |
+                <span onclick="filterSub('frocks')">Girls</span> |
+                <span onclick="filterSub('frocks')">Frocks</span> |
+                <span onclick="filterSub('tshirt')">T-Shirts</span>
+            </div>
+
+            <div class="grid">
+
+                <div class="card" data-name="frock" data-category="frocks">
+                    <img src="images/Cotton-Frock.jpg">
+                    <div class="info">
+                        <h3>Cotton Frock</h3>
+                        <p>₹599</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Cotton Frock',599)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Cotton Frock',599)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="tshirt" data-category="tshirt">
+                    <img src="images/Boys-Polo.jpg">
+                    <div class="info">
+                        <h3>Boys Polo</h3>
+                        <p>₹499</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Boys Polo',499)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Boys Polo',499)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="tshirt" data-category="tshirt">
+                    <img src="images/Boys-Polo2.jpg">
+                    <div class="info">
+                        <h3>Boys Polo</h3>
+                        <p>₹499</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Boys Polo 2',499)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Boys Polo 2',499)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="kids frock" data-category="frocks">
+                    <img src="images/kids-frock.jpg">
+                    <div class="info">
+                        <h3>Princess Frock</h3>
+                        <p>₹599</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Princess Frock',599)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Princess Frock',599)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="tshirt" data-category="tshirt">
+                    <img src="images/kids-tshirt.jpg">
+                    <div class="info">
+                        <h3>Cute Cartoon T-Shirt</h3>
+                        <p>₹499</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Cartoon T-Shirt',499)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Cartoon T-Shirt',499)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="shorts" data-category="shorts">
+                    <img src="images/kids-shorts.jpg">
+                    <div class="info">
+                        <h3>Comfortable Play Shorts</h3>
+                        <p>₹499</p>
+                        <div class="btn-group">
+                            <button onclick="addToCart('Play Shorts',499)" class="btn"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button onclick="buyNow('Play Shorts',499)" class="btn buy"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- ================= PROFILE MODAL ================= -->
+    <div id="profileModal" class="modal">
+        <div class="modal-box">
+            <h2>My Profile</h2>
+
+            <p>Name</p><input type="text" id="p_name" placeholder="Name">
+            <p>Phone Number</p><input type="text" id="p_phone" placeholder="Phone">
+            <p>Address</p><textarea id="p_address" placeholder="Address"></textarea>
+
+            <button class="place-btn" onclick="saveProfile()">Save</button>
+            <button class="close-btn" onclick="closeProfile()">Close</button>
+        </div>
+    </div>
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-box">
+
+            <h2>🛒 Checkout</h2>
+
+            <p id="productTitle"></p>
+
+            <label>Size</label>
+            <select id="size">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+            <label>Quantity</label>
+            <input type="number" id="qty" value="1" min="1" onchange="updateTotal()">
+
+            <h3>💰 Total Price: ₹<span id="totalPrice"></span></h3>
+
+            <h3>👤 Delivery</h3>
+            <p id="userInfo"></p>
+
+            <button onclick="editProfileFromCheckout()">Edit Profile</button>
+
+            <h3>💳 Payment</h3>
+            <select id="payment">
+                <option>UPI</option>
+                <option>COD</option>
+                <option>Card</option>
+            </select>
+
+            <button class="place-btn" onclick="placeOrder()">Place Order</button>
+            <button class="close-btn" onclick="closeCheckout()">Close</button>
+
+        </div>
+    </div>
+     <div id="toast"></div>
+    <!-- ================= MY ORDERS ================= -->
+    <div id="ordersModal" class="modal">
+        <div class="modal-box">
+            <h2>📦 My Orders</h2>
+            <div id="ordersList"></div>
+
+            <button class="close-btn" onclick="closeOrders()">Close</button>
+        </div>
+    </div>
+    <div id="cartModal" class="modal">
+        <div class="modal-box">
+            <h2>🛒 My Cart</h2>
+            <div id="cartItems"></div>
+
+            <button class="close-btn" onclick="closeCart()">Close</button>
+        </div>
+    </div>
+    <div id="trackModal" class="modal">
+    <div class="modal-box">
+        <h2>🚚 Order Tracking</h2>
+
+        <div class="progress-container">
+
+    <div class="step" id="step1">✔️ Order Placed</div>
+    <div class="step" id="step2">🚚 Shipped</div>
+    <div class="step" id="step3">📦 Out for Delivery</div>
+    <div class="step" id="step4">✅ Delivered</div>
+
+</div>
+
+        <button class="close-btn" onclick="closeTrack()">Close</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
