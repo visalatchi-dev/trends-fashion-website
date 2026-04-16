@@ -18,7 +18,7 @@ Trends is a responsive fashion e-commerce website developed using HTML, CSS, and
 - LocalStorage
 
 ## 🌐 Live Demo
-https://yourname.github.io/trends
+https://visalatchi-dev.github.io/trends-fashion-website/
 
 ## 📂 Folder Structure
 - index.html
