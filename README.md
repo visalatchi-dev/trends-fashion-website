@@ -1,2 +1,30 @@
-# trends-fashion-website
-Developed a responsive E-Commerce fashion website using HTML, CSS, and JavaScript. Implemented features like product filtering, search functionality, cart system, user profile, and order tracking using localStorage.
+# Trends - Fashion E-commerce Website 👗🛍️
+
+## 📌 Project Overview
+Trends is a responsive fashion e-commerce website developed using HTML, CSS, and JavaScript. It allows users to browse products, add items to cart, place orders, and track order status.
+
+## 🚀 Features
+- 🛒 Add to Cart functionality
+- 💳 Checkout system
+- 📦 Order tracking (step-by-step)
+- 🔍 Search and filter products
+- 👕 Categories: Men, Women, Kids
+- 📱 Fully responsive design (mobile-friendly)
+
+## 🛠️ Technologies Used
+- HTML
+- CSS
+- JavaScript
+- LocalStorage
+
+## 🌐 Live Demo
+https://yourname.github.io/trends
+
+## 📂 Folder Structure
+- index.html
+- style.css
+- script.js
+- images/
+
+## 🙋‍♀️ Author
+Visalatchi
