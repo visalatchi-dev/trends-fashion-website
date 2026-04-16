@@ -170,7 +170,7 @@ html {
 /* Banner */
 .banner {
     height: 350px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/bannertrends.png') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bannertrends.png') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
