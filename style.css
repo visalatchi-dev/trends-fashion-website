@@ -12,7 +12,7 @@ html {
     scroll-padding-top: 100px;
 }
 
-/* Sticky Navbar */
+
 .navbar {
     background: #fff;
     padding: 15px 5%;
@@ -29,16 +29,16 @@ html {
     width: 100%;
 }
 
-/* LEFT - LOGO */
+
 .logo-area {
     display: flex;
     align-items: center;
     gap: 10px;
     flex: 0;
-    /* 👈 important */
+
 }
 
-/* CENTER - SEARCH */
+
 .search-bar {
     flex: 1;
     display: flex;
@@ -56,7 +56,7 @@ html {
 }
 
 
-/* RIGHT - ICONS */
+
 .nav-right {
     display: flex;
     align-items: center;
@@ -138,7 +138,7 @@ html {
     cursor: pointer;
 }
 
-/* Sidebar */
+
 .sidebar {
     position: fixed;
     left: -280px;
@@ -167,7 +167,7 @@ html {
     border-bottom: 1px solid #f0f0f0;
 }
 
-/* Banner */
+
 .banner {
     height: 350px;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bannertrends.png') center/cover;
@@ -182,7 +182,6 @@ html {
     font-size: 48px;
 }
 
-/* Grid Sections */
 .cat-section {
     padding: 50px 5%;
 }
@@ -246,7 +245,6 @@ html {
     margin-top: 5px;
 }
 
-/* Mobile View */
 @media (max-width: 768px) {
 
     .nav-links,
@@ -276,7 +274,7 @@ html {
 
     .btn-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 8px;
     width: 100%;
 }
@@ -288,9 +286,9 @@ html {
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 8px;
-        font-size: 11px;
-        white-space: nowrap; 
+        padding: 10px;
+        font-size: 14px;
+        white-space: normal; 
     }
 
 }
@@ -302,7 +300,6 @@ html {
     gap: 10px;
 }
 
-/* COMMON BUTTON */
 .btn {
     padding: 8px 12px;
     border: none;
@@ -321,13 +318,13 @@ html {
     font-size: 12px;
 }
 
-/* HOVER EFFECT */
+
 .btn:hover {
     background: #000;
     transform: scale(1.05);
 }
 
-/* BUY NOW BUTTON */
+
 .btn.buy {
     background: #ff3f6c;
 }
@@ -348,7 +345,7 @@ html {
     align-items: center;
 
     overflow-y: auto;
-    /* 🔥 MAIN FIX */
+
 }
 
 .modal-box {
